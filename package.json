@@ -1,0 +1,57 @@
+{
+  "name": "royceslot",
+  "version": "0.0.0",
+  "description": "slot game",
+  "main": "index.js",
+  "devDependencies": {
+    "@types/pixi.js": "^4.8.1",
+    "copy-webpack-plugin": "^4.5.3",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.1.1",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "ts-loader": "^5.2.1",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-plugin-prettier": "^2.0.0",
+    "typescript": "^3.1.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "tslint": "tslint",
+    "webpack": "webpack",
+    "lint": "tslint --fix --project .",
+    "build": "npm run lint && webpack -p",
+    "start": "npm run lint && webpack-dev-server -d --hot --inline",
+    "clean": "rm -r ./build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RamanBhardwaj96/royceSlot.git"
+  },
+  "keywords": [
+    "slot",
+    "pixi",
+    "typescript"
+  ],
+  "author": "Raman Bhardwaj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RamanBhardwaj96/royceSlot/issues"
+  },
+  "homepage": "https://github.com/RamanBhardwaj96/royceSlot#readme",
+  "dependencies": {
+    "pixi.js": "^4.8.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "tabWidth": 2
+  }
+}
