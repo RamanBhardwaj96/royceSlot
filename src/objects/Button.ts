@@ -1,4 +1,5 @@
 import * as PIXI from "pixi.js";
+import Loader from "../utils/Loader";
 
 export default class Button extends PIXI.Container {
 
@@ -8,7 +9,7 @@ export default class Button extends PIXI.Container {
     constructor(app: PIXI.Application, text: string) {
         super();
         this.interactive = true;
-
+        this.cursor = "pointer";
         // Generate background
         const graphics: PIXI.Graphics = new PIXI.Graphics();
         graphics.beginFill(0xffffff);
@@ -24,5 +25,17 @@ export default class Button extends PIXI.Container {
 
         this.addChild(this.background);
         this.addChild(this.text);
+    }
+}
+
+export class SpinButton extends PIXI.Container {
+    private _btnSprite: PIXI.Sprite;
+    constructor() {
+        super();
+        this.interactive = true;
+        this.cursor = "pointer";
+        this._btnSprite = new PIXI.Sprite(Loader.getAsset("game", "spinBtn").texture);
+        this._btnSprite.anchor.set(0.5);
+        this.addChild(this._btnSprite);
     }
 }

@@ -18,7 +18,7 @@ export default class Splash extends Scene implements IScene {
     public init(): void {
 
         const assets: { [name: string]: string } = {
-            bunny: 'assets/images/bunny.png',
+            spinBtn: 'assets/buttons/spinBtn.png',
             //mid symbols
             M1: 'assets/images/symbols/Mid/M1.png',
             M2: 'assets/images/symbols/Mid/M2.png',

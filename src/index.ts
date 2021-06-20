@@ -1,5 +1,5 @@
 import * as PIXI from "pixi.js";
-import {SceneManager} from "pixi-scenes";
+import { SceneManager } from "pixi-scenes";
 import Scale from "./utils/Scale";
 import Resize from "./utils/Resize";
 import Splash from "./scenes/Splash";
@@ -27,7 +27,7 @@ function setup(): void {
         backgroundColor: 0x1099bb,
     });
     content.appendChild(app.view);
-    
+
     // Setup right app size
     resize();
 
@@ -49,7 +49,7 @@ function resize(): void {
         return;
     }
 
-    const newResolution: [number, number] = Scale.fitAspect(window.innerWidth, window.innerHeight, window.innerWidth/window.innerHeight),
+    const newResolution: [number, number] = Scale.fitAspect(window.innerWidth, window.innerHeight, window.innerWidth / window.innerHeight),
         hasResized: boolean = Resize(app.renderer, newResolution[0], newResolution[1]);
 
     if (hasResized && scenes) {
