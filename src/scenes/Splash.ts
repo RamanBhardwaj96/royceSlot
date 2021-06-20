@@ -1,5 +1,5 @@
 import * as PIXI from "pixi.js";
-import {Scene} from "pixi-scenes";
+import { Scene } from "pixi-scenes";
 import Loader from "../utils/Loader";
 import LoadIndicator from "../objects/LoadIndicator";
 import IScene from "./IScene";
@@ -17,8 +17,25 @@ export default class Splash extends Scene implements IScene {
 
     public init(): void {
 
-        const assets: any = {
+        const assets: { [name: string]: string } = {
             bunny: 'assets/images/bunny.png',
+            //mid symbols
+            M1: 'assets/images/symbols/Mid/M1.png',
+            M2: 'assets/images/symbols/Mid/M2.png',
+            M3: 'assets/images/symbols/Mid/M3.png',
+            M4: 'assets/images/symbols/Mid/M4.png',
+            M5: 'assets/images/symbols/Mid/M5.png',
+
+            // low symbols
+            L1: 'assets/images/symbols/Low/L1.png',
+            L2: 'assets/images/symbols/Low/L2.png',
+            L3: 'assets/images/symbols/Low/L3.png',
+            L4: 'assets/images/symbols/Low/L4.png',
+            L5: 'assets/images/symbols/Low/L5.png',
+
+            //scatter symbol
+            S: 'assets/images/symbols/scatter/S.png',
+
         };
 
         // Start loading game assets
@@ -41,7 +58,7 @@ export default class Splash extends Scene implements IScene {
 
     public resize(): void {
         this.loadIndicator.x = this.app.screen.width / 2;
-        this.loadIndicator.y =this.app.screen.height / 2
+        this.loadIndicator.y = this.app.screen.height / 2
     }
 
     public update(delta: number): void {

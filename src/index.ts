@@ -1,10 +1,8 @@
 import * as PIXI from "pixi.js";
 import {SceneManager} from "pixi-scenes";
-import 'pixi-sound';
 import Scale from "./utils/Scale";
 import Resize from "./utils/Resize";
 import Splash from "./scenes/Splash";
-import Boot from "./scenes/Boot";
 import Menu from "./scenes/Menu";
 import Gameplay from "./scenes/Gameplay";
 import Throttle from "./utils/Throttle";
@@ -35,13 +33,12 @@ function setup(): void {
 
     // Add all scenes
     scenes = new SceneManager(app);
-    scenes.add('boot', new Boot());
     scenes.add('splash', new Splash());
     scenes.add('menu', new Menu());
     scenes.add('gameplay', new Gameplay());
 
     // Start loading
-    scenes.start('boot');
+    scenes.start('splash');
 
     // Handle various window events
     window.addEventListener('resize', Throttle(resize, 300));

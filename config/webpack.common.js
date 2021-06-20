@@ -9,6 +9,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     context: root, // to automatically find tsconfig.json
     entry: path.join(root, 'src/index.ts'),
+    devtool: "eval-cheap-source-map",
     resolve: {
         extensions: ['.tsx', '.ts', '.js']
     },
