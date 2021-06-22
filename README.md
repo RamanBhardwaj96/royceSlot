@@ -35,23 +35,23 @@
 
 - Result alloted to keys (additional symbols win can also be there since whole reel grid is not being tampered for this)
 
-    0 &nbsp; &nbsp;-> &nbsp; &nbsp;[0, 0, 0, 0, 0]
-    1 &nbsp; &nbsp;-> &nbsp; &nbsp;[1, 1, 1, 1, 1]
-    2 &nbsp; &nbsp;-> &nbsp; &nbsp;[2, 2, 2, 2, 2]    
-    3 &nbsp; &nbsp;-> &nbsp; &nbsp;[1, 0, 1, 0, 1]
-    4 &nbsp; &nbsp;-> &nbsp; &nbsp;[2, 1, 2, 1, 2]  
-    5 &nbsp; &nbsp;-> &nbsp; &nbsp;[0, 1, 0, 1, 0]
-    6 &nbsp; &nbsp;-> &nbsp; &nbsp;[1, 2, 1, 2, 1]
+   - 0  &nbsp;-> &nbsp;[0, 0, 0, 0, 0]
+   - 1  &nbsp;-> &nbsp;[1, 1, 1, 1, 1]
+   - 2  &nbsp;-> &nbsp;[2, 2, 2, 2, 2]
+   - 3  &nbsp;-> &nbsp;[1, 0, 1, 0, 1]
+   - 4  &nbsp;-> &nbsp;[2, 1, 2, 1, 2]
+   - 5  &nbsp;-> &nbsp;[0, 1, 0, 1, 0]
+   - 6  &nbsp;-> &nbsp;[1, 2, 1, 2, 1]
 
 
 ## Dev Stuff
 - open console for same window
 - Inside filter type **Response**
 There you will see, all Game Results like
-  &nbsp; &nbsp; &nbsp; &nbsp;  Response: ReelGrid // reel grid of symbols in string
-  &nbsp; &nbsp; &nbsp; &nbsp;  Response: OutcomeSetter // if you have pressed 0-6 
-  &nbsp; &nbsp; &nbsp; &nbsp;  Response: all Win Data // if thre is any win in current spin
-  &nbsp; &nbsp; &nbsp; &nbsp; Response: All Win Amount // total win Amount of Current spin.
+  -  Response: ReelGrid // reel grid of symbols in string
+  - Response: OutcomeSetter // if you have pressed 0-6 
+  - Response: all Win Data // if thre is any win in current spin
+  - Response: All Win Amount // total win Amount of Current spin.
 
 - Tech used-> PIXI.js, GSAP , Webpack, Typescript
 
