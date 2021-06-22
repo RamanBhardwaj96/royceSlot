@@ -1,6 +1,6 @@
 {
   "name": "royceslot",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "slot game project",
   "scripts": {
     "dev": "webpack-dev-server --config ./config/webpack.dev.js",
@@ -9,6 +9,7 @@
   "author": "Raman Bhardwaj",
   "license": "ISC",
   "dependencies": {
+    "gsap": "^3.7.0",
     "pixi-scenes": "^1.4.0",
     "pixi.js": "^5.1.3"
   },

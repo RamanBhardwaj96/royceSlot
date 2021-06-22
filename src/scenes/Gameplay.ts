@@ -1,5 +1,7 @@
+import gsap from "gsap/all";
 import { Scene } from "pixi-scenes";
 import { Constants } from "../Constants";
+import { GameModel } from "../Model/GameModel";
 import { SpinButton } from "../objects/Button";
 import { ReelArea } from "../reelArea/ReelArea";
 import IScene from "./IScene";
@@ -10,10 +12,28 @@ export default class Gameplay extends Scene implements IScene {
     private _width: number;
     private _height: number;
 
+    /**
+     * function will be called on intro continue click
+     */
     public init(): void {
+
+        // event specific for outcome setter
+        window.addEventListener("keydown", (ev) => {
+            GameModel.OutComeSetter(ev.key);
+        });
 
         this._reelArea = new ReelArea();
         this._spinBtn = new SpinButton();
+
+        // spin start from here and on complete of spin
+        //show spin button and start win presentation
+        this._spinBtn.on("click", () => {
+            this._spinBtn.visible = false;
+            this._reelArea.spinStart().eventCallback("onComplete", () => {
+                this._spinBtn.visible = true;
+                this._reelArea.dimDownNoWinReels();
+            });
+        });
 
         this._reelArea.pivot.x = this._reelArea.width / 2;
         this._reelArea.pivot.y = this._reelArea.height / 2;
@@ -27,6 +47,9 @@ export default class Gameplay extends Scene implements IScene {
         this.resize();
     }
 
+    /**
+     * resize to keep everything in middle of screen
+     */
     public resize(): void {
         this._reelArea.x = this.app.screen.width / 2;
         this._reelArea.y = this.app.screen.height / 2;

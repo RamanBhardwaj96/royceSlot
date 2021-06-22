@@ -4,6 +4,7 @@ export class Constants {
     public static SYMBOL_PER_REEL: number = 3;
 
     public static AVAILABLE_SYMBOLS: string[] = ["L1", "L2", "L3", "L4", "L5", "M1", "M2", "M3", "M4", "M5", "S"];
+    public static AVAILABLE_SYMBOLS_SINGLE_PAYOUT: number[] = [2, 2, 1, 1, 1, 5, 5, 4, 4, 4, 0];
     public static OFFSET_Y: number = 2;
     public static OFFSET_X: number = 6;
 

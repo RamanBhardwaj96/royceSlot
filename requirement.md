@@ -5,10 +5,10 @@ Build a simple slot
 
 ### Functionality
 
-- Pressing Spin should return a random result.
-- Set amount of winning lines.
-- Provide proper documentation.
-- Proper error handling should be used.
+- Pressing Spin should return a random result.  -[DONE]
+- Set amount of winning lines.  -[DONE]
+- Provide proper documentation.  -[DONE]
+- Proper error handling should be used.  -[DONE]
 
 ## What We Care About
 
@@ -24,8 +24,8 @@ Here's what you should strive for:
 
 ### Bonus
 
-  - Responsive design.
+  - Responsive design.  -[DONE]
   - Bonus Game
   - Use Docker containers.
   - Utilize Docker Compose.
-  - Tests
+  - Tests  -[DONE]

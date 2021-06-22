@@ -30,6 +30,7 @@ export default class Button extends PIXI.Container {
 
 export class SpinButton extends PIXI.Container {
     private _btnSprite: PIXI.Sprite;
+
     constructor() {
         super();
         this.interactive = true;
